@@ -11,11 +11,11 @@ export default async function handler(req, res) {
   try {
     // ❗ session create only once (optional)
     await fetch(
-      `https://fl ipy-flip.vercel.app/session/create?session=${session}&ai_name=test&looklike=girl&core_prompt=You+are+a+helpful+AI&my_name=user&password=1234`
+      `https://flipy-flip.vercel.app/session/create?session=${session}&ai_name=test&looklike=girl&core_prompt=You+are+a+helpful+AI&my_name=user&password=1234`
     );
 
     const apiRes = await fetch(
-      `https://fl ipy-flip.vercel.app/chat?message=${encodeURIComponent(text)}&session=${session}`
+      `https://flipy-flip.vercel.app/chat?message=${encodeURIComponent(text)}&session=${session}`
     );
 
     const data = await apiRes.json();
